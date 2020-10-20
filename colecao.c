@@ -1,4 +1,7 @@
+#include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "pais.h"
 #include "colecao.h"
 
 typedef struct _colecao_ 

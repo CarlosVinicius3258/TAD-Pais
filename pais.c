@@ -10,7 +10,7 @@ typedef struct _pais_{
   float idh;
 
 }Pais;
-
+// Compara as variaveis de pais
 int cmpPais(void* pais1, void* pais2){
 
   if(pais1!=NULL && pais2 != NULL){
@@ -29,7 +29,7 @@ int cmpPais(void* pais1, void* pais2){
   return FALSE; 
 }
 
-//Construtor
+//Funcao que retorna um pais criado a partir das entradas correspondentes dos atributos
 Pais* criarPais(char nome[], int idade, float idh){
   Pais* pais = (Pais*) malloc(sizeof(Pais));
   if(pais!=NULL){
@@ -42,7 +42,7 @@ Pais* criarPais(char nome[], int idade, float idh){
   return NULL;
 }
 
-//Getters
+//retorna as variaveis de país-> usada no Listar País
 char* pegarNome(Pais* pais){
   if(pais!=NULL){
     return pais->nome;
@@ -50,6 +50,7 @@ char* pegarNome(Pais* pais){
   return NULL;
 }
 
+//Retorna idade do pais
 int pegarIdade(Pais* pais){
   if(pais!=NULL){
     return pais->idade;
@@ -57,6 +58,7 @@ int pegarIdade(Pais* pais){
   return -1;
 }
 
+//Retorna idh do país
 float pegarIdh(Pais* pais){
   if(pais!=NULL){
     return pais->idh;
