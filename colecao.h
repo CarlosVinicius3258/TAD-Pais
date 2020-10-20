@@ -52,4 +52,9 @@ void *colPegarPrimeiro(Colecao *c);
 void *colPegarProximo(Colecao *c);
 //-------------------------------------//
 
+//-------------------------------------//
+//Pega o número de elementos adicionados na coleção
+int colPegarNumItens(Colecao* c);
+//-------------------------------------//
+
 #endif

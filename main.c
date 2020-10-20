@@ -16,6 +16,7 @@ int main(void){
       printf("\n\t\t\t-----------------*---------------\n");
       printf("\t\t\t---------- Colecao Pais ---------");
       printf("\n\t\t\t-----------------*---------------\n");
+      
       printf("\t\t\t1. Fundar Pais\n");
       printf("\t\t\t2. Listar Paises\n");
       printf("\t\t\t3. Buscar Pais\n");

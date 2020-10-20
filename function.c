@@ -45,7 +45,6 @@ void fundarPais(){
      if(pais!=NULL){
        if(colInserir(mundo, pais)){
          printf("\n\t\t\tParabéns!! Pais fundado.\n");
-       
        }else{
        printf("\n\t\t\tErro! Tente novamente.\n");
      }
@@ -60,12 +59,14 @@ void fundarPais(){
 void listarPaises(){
   if(mundo!=NULL){
     pais = colPegarPrimeiro(mundo);
+
     while(pais!=NULL){
-      printf("\n\t\t\t -- PAIS -- \n");
-      printf("\t\t\t NOME:  %s\n", pegarNome(pais));
-      printf("\t\t\t IDADE:  %d\n", pegarIdade(pais));
-      printf("\t\t\t IDH: %f \n\n", pegarIdh(pais));
-      pais = colPegarProximo(mundo);
+        printf("\n\t\t\t -- PAIS -- \n");
+        printf("\t\t\t NOME:  %s\n", pegarNome(pais));
+        printf("\t\t\t IDADE:  %d\n", pegarIdade(pais));
+        printf("\t\t\t IDH: %f \n\n", pegarIdh(pais));
+        
+        pais = colPegarProximo(mundo); 
     }
   }else{
     printf("\n\t\t\tPRIMEIRO FUNDE ALGUNS PAISES PARA SABER QUAIS EXISTEM. \n");
@@ -133,11 +134,14 @@ void destruirPais(){
          printf("\n\t\t\tPAIS DESTRUIDO!!\n\n");
        if(!colPegarPrimeiro(mundo)){
          int op;
+
          printf("\t\t\t Você não tem mais paises no seu mundo. Deseja destrui-lo?\n\t\t\t1. SIM\n \t\t\t2. NAO\n\t\t\tOpcao:");
          scanf("%d", &op);
+
          if(op==1){
            colDestruir(mundo);
            mundo = NULL;
+           
            printf("\n\t\t\tUma grande praga assolou seu mundo! Você está no espaço, volte\n");
            printf("\t\t\t Crie outro para reinar sobre a Terra\n");
          }
